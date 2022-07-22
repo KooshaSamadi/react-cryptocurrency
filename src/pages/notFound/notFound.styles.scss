@@ -1,0 +1,45 @@
+.notfound-container {
+  background: url("../../assets/notfound.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* Set rules to fill background */
+  min-height: 100%;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  .error404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    p {
+      font-size: 18vw;
+      font-weight: 700;
+      color: #ddd;
+      line-height: 1;
+      letter-spacing: 4px;
+      margin-bottom: 2rem;
+    }
+    h4 {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 2rem;
+    }
+    button {
+     
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

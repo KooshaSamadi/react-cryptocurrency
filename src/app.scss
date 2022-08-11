@@ -12,3 +12,25 @@ a {
 li {
   list-style-type: none;
 }
+.homepage-container,
+.exchange-container,
+.news-container,
+.cryptocurrency-container,
+.cryptoDetail-container {
+  width: calc(100vw - 300px);
+  position: relative;
+  margin-left: 300px;
+  background-color: rgb(190, 143, 143);
+}
+@media screen and (max-width: 768px) {
+  .homepage-container,
+  .exchange-container,
+  .news-container,
+  .cryptocurrency-container,
+  .cryptoDetail-container {
+    position: relative;
+    width: 100vw;
+    background-color: red;
+    margin-left: 0px;
+  }
+}

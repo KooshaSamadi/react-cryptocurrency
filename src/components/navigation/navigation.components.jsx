@@ -4,6 +4,8 @@ import { AreaChartOutlined } from "@ant-design/icons";
 import { Avatar } from "antd";
 import { Link, Outlet } from "react-router-dom";
 import Exit from "../../assets/exit.png";
+import { MdHomeFilled } from "react-icons/md";
+import { BsCoin, BsCurrencyExchange, BsNewspaper } from "react-icons/bs";
 const Navigation = () => {
   const [open, setOpen] = useState(true);
   return (
@@ -15,16 +17,27 @@ const Navigation = () => {
             icon={<AreaChartOutlined />}
             style={{ backgroundColor: "transparent", color: "white" }}
           />
-          <h1>Crypto World</h1>
+          <Link to="/" onClick={() => setOpen(!open)}>
+            <h1>Crypto World</h1>
+          </Link>
         </div>
+
         <ul className="menu-container">
-          <Link to="/">Home</Link>
-
-          <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-
-          <Link to="/exchanges">Exchanges</Link>
-
-          <Link to="/news">News</Link>
+          <Link to="/" onClick={() => setOpen(!open)}>
+            <MdHomeFilled size={30} color="white" />
+            Home
+          </Link>
+          <Link to="/cryptocurrencies" onClick={() => setOpen(!open)}>
+            <BsCoin size={30} color="white" />
+            Cryptocurrencies
+          </Link>
+          <Link to="/exchanges" onClick={() => setOpen(!open)}>
+            <BsCurrencyExchange size={30} color="white" />
+            Exchanges
+          </Link>
+          <Link to="/news" onClick={() => setOpen(!open)}>
+            <BsNewspaper size={30} color="white" /> News
+          </Link>
         </ul>
         <img src={Exit} className="cross" onClick={() => setOpen(!open)} />
       </div>

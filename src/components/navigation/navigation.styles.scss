@@ -9,6 +9,9 @@
     flex-direction: column;
     align-items: flex-start;
     a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       padding: 1rem;
       font-size: 18px;
       width: 100%;
@@ -16,6 +19,9 @@
         background-color: rgb(88, 55, 55);
         cursor: pointer;
         color: white;
+      }
+      svg {
+        margin-right: 1rem;
       }
     }
   }
@@ -40,6 +46,9 @@
     display: none;
   }
 }
+.navbar-smalldevice {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .navigation-container {
     z-index: 10;
@@ -50,9 +59,12 @@
       a {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         padding: 2rem;
         font-size: 20px;
+        svg {
+          margin-right: 1rem;
+        }
       }
     }
     .cross {
@@ -73,6 +85,7 @@
     position: relative;
     background-color: #001529;
     height: 10vh;
+    min-height: 65px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -85,9 +98,9 @@
       z-index: 0;
       position: absolute;
       right: 15px;
-      background-color: rgba($color: rgb(122, 255, 73), $alpha: 0.67);
-      padding: 0.5rem;
-      border-radius: 40%;
+      background-color: rgb(255, 255, 255);
+      padding: 0.4rem;
+      border-radius: 15%;
     }
   }
 }

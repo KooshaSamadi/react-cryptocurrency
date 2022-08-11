@@ -14,12 +14,14 @@ function App() {
     <div className="app">
       <Routes>
         <Route path="/" element={<Navigation />}>
+          {/* Outlet */}
           <Route index element={<Homepage />} />
           <Route path="cryptocurrencies" element={<Cryptocurrencies />} />
           <Route path="exchanges" element={<Exchanges />} />
           <Route path="news" element={<News />} />
-          <Route path="cryptodetail" element={<CryptoDetail />} />
+          <Route path="crypto/:coinId" element={<CryptoDetail />} />
         </Route>
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

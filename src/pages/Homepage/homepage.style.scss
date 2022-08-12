@@ -6,4 +6,10 @@
   padding-top: 1rem;
 }
 .homepage-container {
+  overflow-y: hidden;
+  padding-right: 1rem;
+  .homepage-title {
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
 }

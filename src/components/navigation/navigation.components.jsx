@@ -7,7 +7,7 @@ import Exit from "../../assets/exit.png";
 import { MdHomeFilled } from "react-icons/md";
 import { BsCoin, BsCurrencyExchange, BsNewspaper } from "react-icons/bs";
 const Navigation = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <>
       <div className={`navigation-container ${!open ? "close" : ""}`}>

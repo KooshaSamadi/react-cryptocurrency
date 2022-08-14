@@ -18,6 +18,26 @@ const options = {
   },
 };
 
+const extraOptions=(limit)=>{
+  return {
+    method: "GET",
+    url: "coins",
+    params: {
+      referenceCurrencyUuid: "yhjMzLPhuIDl",
+      timePeriod: "24h",
+      "tiers[0]": "1",
+      orderBy: "marketCap",
+      orderDirection: "desc",
+      limit: limit,
+      offset: "49",
+    },
+    headers: {
+      "X-RapidAPI-Key": "7ed75709d1msh019d7b72f13d0dap10a3d7jsn433fc48eb898",
+      "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+    },
+  }
+}
+
 const baseUrl = "https://coinranking1.p.rapidapi.com";
 
 export const cryptoApi = createApi({
@@ -25,7 +45,10 @@ export const cryptoApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
   endpoints: (builder) => ({
     getCoins: builder.query({
-      query: () => options,
+      query: () => {
+        console.log("Here");
+        return options;
+      },
     }),
   }),
 });

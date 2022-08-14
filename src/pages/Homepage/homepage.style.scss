@@ -6,10 +6,32 @@
   padding-top: 1rem;
 }
 .homepage-container {
-  overflow-y: hidden;
-  padding-right: 1rem;
+  overflow-x: hidden;
+
   .homepage-title {
     padding-left: 1rem;
     padding-top: 1rem;
+  }
+  .homepage-top10 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    margin-top: 3rem;
+    h2 {
+      margin-bottom: 0rem;
+      width: 70%;
+    }
+  }
+  .homepage-news-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    margin-top: 3rem;
+    h2 {
+      margin-bottom: 0rem;
+      width: 70%;
+    }
   }
 }

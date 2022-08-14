@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -20,6 +21,7 @@ li {
   width: calc(100vw - 300px);
   position: relative;
   margin-left: 300px;
+  padding-right: 1rem;
 }
 @media screen and (max-width: 768px) {
   .homepage-container,
@@ -30,5 +32,6 @@ li {
     position: relative;
     width: 100vw;
     margin-left: 0px;
+    padding-right: 0rem;
   }
 }

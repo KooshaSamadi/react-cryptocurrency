@@ -24,15 +24,18 @@ function Cryptocurrencies() {
   return (
     <div className="cryptocurrency-container">
       <Typography.Title level={1}>Cryptocurrencies List</Typography.Title>
-      <div className="cryptocurrency_searchBox">
-        <Input.Search
-          placeholder="Search Coin"
-          allowClear
-          enterButton="Search"
-          size="large"
-          onSearch={(e) => setSearchData(e)}
-        />
-      </div>
+      <Row>
+        <Col span={24} align="middle">
+          <Input.Search
+            className="cryptocurrency_searchBox"
+            placeholder="Search Coin"
+            allowClear
+            enterButton="Search"
+            size="large"
+            onSearch={(e) => setSearchData(e)}
+          />
+        </Col>
+      </Row>
 
       {isLoading ? (
         "loading"

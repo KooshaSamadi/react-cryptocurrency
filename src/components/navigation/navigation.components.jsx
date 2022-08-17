@@ -8,6 +8,7 @@ import { MdHomeFilled } from "react-icons/md";
 import { BsCoin, BsCurrencyExchange, BsNewspaper } from "react-icons/bs";
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+
   return (
     <>
       <div className={`navigation-container ${!open ? "close" : ""}`}>
@@ -23,7 +24,12 @@ const Navigation = () => {
         </div>
 
         <ul className="menu-container">
-          <Link to="/" onClick={() => setOpen(!open)}>
+          <Link
+            to="/"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
             <MdHomeFilled size={30} color="white" />
             Home
           </Link>

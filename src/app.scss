@@ -5,6 +5,14 @@
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-y: hidden;
+  }
 }
 a {
   text-decoration: none;
@@ -23,6 +31,13 @@ li {
   margin-left: 300px;
   padding-right: 1rem;
 }
+@media screen and (min-width: 769px) {
+  .cryptocurrency_searchBox {
+    padding: 1rem 1rem;
+    width: 50%;
+    min-width: 30rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .homepage-container,
   .exchange-container,
@@ -33,5 +48,12 @@ li {
     width: 100vw;
     margin-left: 0px;
     padding-right: 0rem;
+  }
+  .cryptocurrency_searchBox {
+    width: 100% !important;
+  }
+  .form-select {
+    width: 90% !important;
+    min-width: 1rem !important;
   }
 }

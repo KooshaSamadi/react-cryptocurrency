@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const options = {
   method: "GET",
-  url: "coins",
+  url: "/coins",
   params: {
     referenceCurrencyUuid: "yhjMzLPhuIDl",
     timePeriod: "24h",
@@ -18,25 +18,17 @@ const options = {
   },
 };
 
-const extraOptions=(limit)=>{
+const detailOption = (coinId) => {
   return {
     method: "GET",
-    url: "coins",
-    params: {
-      referenceCurrencyUuid: "yhjMzLPhuIDl",
-      timePeriod: "24h",
-      "tiers[0]": "1",
-      orderBy: "marketCap",
-      orderDirection: "desc",
-      limit: limit,
-      offset: "49",
-    },
+    url: `/coin/${coinId}`,
+    params: { referenceCurrencyUuid: "yhjMzLPhuIDl", timePeriod: "24h" },
     headers: {
       "X-RapidAPI-Key": "7ed75709d1msh019d7b72f13d0dap10a3d7jsn433fc48eb898",
       "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
     },
-  }
-}
+  };
+};
 
 const baseUrl = "https://coinranking1.p.rapidapi.com";
 
@@ -50,6 +42,11 @@ export const cryptoApi = createApi({
         return options;
       },
     }),
+    getCoinDetail: builder.query({
+      query: (coinId) => {
+        return detailOption(coinId);
+      },
+    }),
   }),
 });
-export const { useGetCoinsQuery } = cryptoApi;
+export const { useGetCoinsQuery, useGetCoinDetailQuery } = cryptoApi;

@@ -1,0 +1,15 @@
+.cryptoDetail-title {
+  margin: 1rem;
+}
+
+.time-period-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  .form-select {
+    width: 50% !important;
+    min-width: 26rem !important;
+    margin-top: 1rem !important;
+  }
+}

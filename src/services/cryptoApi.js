@@ -30,6 +30,21 @@ const detailOption = (coinId) => {
   };
 };
 
+const historyOption = (coinId, timePeriod) => {
+  return {
+    method: "GET",
+    url: `/coin/${coinId}/history`,
+    params: {
+      referenceCurrencyUuid: "yhjMzLPhuIDl",
+      timePeriod: `${timePeriod}`,
+    },
+    headers: {
+      "X-RapidAPI-Key": "7ed75709d1msh019d7b72f13d0dap10a3d7jsn433fc48eb898",
+      "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+    },
+  };
+};
+
 const baseUrl = "https://coinranking1.p.rapidapi.com";
 
 export const cryptoApi = createApi({
@@ -47,6 +62,15 @@ export const cryptoApi = createApi({
         return detailOption(coinId);
       },
     }),
+    getCoinHistory: builder.query({
+      query: ({ coinId, timePeriod }) => {
+        return historyOption(coinId, timePeriod);
+      },
+    }),
   }),
 });
-export const { useGetCoinsQuery, useGetCoinDetailQuery } = cryptoApi;
+export const {
+  useGetCoinsQuery,
+  useGetCoinDetailQuery,
+  useGetCoinHistoryQuery,
+} = cryptoApi;

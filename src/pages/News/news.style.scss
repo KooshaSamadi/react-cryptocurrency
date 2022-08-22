@@ -5,12 +5,12 @@
     overflow-y: hidden;
     text-align: center;
   }
-  .form-select {
-    width: 50%;
-    min-width: 26rem;
-    margin-top: 1rem;
-  }
-  .form-select:focus {
-    box-shadow: none;
-  }
+}
+.form-select {
+  width: 50%;
+  min-width: 26rem;
+  margin-top: 1rem;
+}
+.form-select:focus {
+  box-shadow: none;
 }
